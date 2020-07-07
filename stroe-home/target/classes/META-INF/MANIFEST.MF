@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: stroe-home
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: XP
+Implementation-Vendor-Id: com.cs.qingcheng
+Build-Jdk: 1.8.0_121
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/stroe-home
+Created-By: Maven Integration for Eclipse
+

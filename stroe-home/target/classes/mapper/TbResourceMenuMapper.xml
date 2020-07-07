@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qingcheng.mapper.ResourceMenuMapper" >
+  <resultMap id="BaseResultMap" type="com.qingcheng.pojo.ResourceMenuKey" >
+    <id column="resource_id" property="resourceId" jdbcType="INTEGER" />
+    <id column="menu_id" property="menuId" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="com.qingcheng.pojo.ResourceMenuKey" >
+    delete from tb_resource_menu
+    where resource_id = #{resourceId,jdbcType=INTEGER}
+      and menu_id = #{menuId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.qingcheng.pojo.ResourceMenuKey" >
+    insert into tb_resource_menu (resource_id, menu_id)
+    values (#{resourceId,jdbcType=INTEGER}, #{menuId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.qingcheng.pojo.ResourceMenuKey" >
+    insert into tb_resource_menu
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="resourceId != null" >
+        resource_id,
+      </if>
+      <if test="menuId != null" >
+        menu_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="resourceId != null" >
+        #{resourceId,jdbcType=INTEGER},
+      </if>
+      <if test="menuId != null" >
+        #{menuId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

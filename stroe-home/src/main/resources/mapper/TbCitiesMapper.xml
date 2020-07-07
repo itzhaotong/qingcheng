@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qingcheng.mapper.CitiesMapper" >
+  <resultMap id="BaseResultMap" type="com.qingcheng.pojo.Cities" >
+    <id column="cityid" property="cityid" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="provinceid" property="provinceid" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    cityid, city, provinceid
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_cities
+    where cityid = #{cityid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from tb_cities
+    where cityid = #{cityid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.qingcheng.pojo.Cities" >
+    insert into tb_cities (cityid, city, provinceid
+      )
+    values (#{cityid,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, #{provinceid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.qingcheng.pojo.Cities" >
+    insert into tb_cities
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="cityid != null" >
+        cityid,
+      </if>
+      <if test="city != null" >
+        city,
+      </if>
+      <if test="provinceid != null" >
+        provinceid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="cityid != null" >
+        #{cityid,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null" >
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceid != null" >
+        #{provinceid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qingcheng.pojo.Cities" >
+    update tb_cities
+    <set >
+      <if test="city != null" >
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceid != null" >
+        provinceid = #{provinceid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where cityid = #{cityid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qingcheng.pojo.Cities" >
+    update tb_cities
+    set city = #{city,jdbcType=VARCHAR},
+      provinceid = #{provinceid,jdbcType=VARCHAR}
+    where cityid = #{cityid,jdbcType=VARCHAR}
+  </update>
+</mapper>

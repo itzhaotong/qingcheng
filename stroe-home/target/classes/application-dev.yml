@@ -1,0 +1,34 @@
+mapper:
+    identity: MYSQL
+    not-empty: false
+mybatis:
+    configuration:
+        mapUnderscoreToCamelCase: true
+    mapper-locations: classpath:mapper/*.xml
+    type-aliases-package: com.qingcheng.mapper
+   
+pagehelper:
+    params: count=countSql
+    helperDialect: mysql
+    supportMethodsArguments: true
+server:
+    port: 8080
+    tomcat:
+        uri-encoding: UTF-8
+spring:
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://192.168.172.86:3306/qingcheng?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&autoReconnect=true&useSSL=true&allowMultiQueries=true
+        username: root
+        password: root
+        druid:
+            initial-size: 1
+            max-active: 20
+            min-idle: 1
+            test-on-borrow: true
+            stat-view-servlet:
+                allow: true
+    http:
+        multipart:
+            maxFileSize: 100Mb
+            maxRequestSize: 1000Mb
