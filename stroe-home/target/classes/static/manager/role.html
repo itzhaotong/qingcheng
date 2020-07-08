@@ -96,7 +96,7 @@
                             <el-form-item label="图片">
                                 <el-upload
                                         class="avatar-uploader"
-                                        action="/upload/native.do"
+                                        action="/upload/native"
                                         :show-file-list="false"
                                         :on-success="handleAvatarSuccess"
                                         :before-upload="beforeAvatarUpload">
@@ -143,14 +143,14 @@
         },
         methods:{
             fetchData (){
-                axios.post(`/role/findPage.do?page=${this.currentPage}&size=${this.size}`,this.searchMap).then(response => {
+                axios.post(`/role/findPage?page=${this.currentPage}&size=${this.size}`,this.searchMap).then(response => {
                     this.tableData = response.data.rows;
                     this.total = response.data.total;
                 });
             },
             save (){
                 // this.pojo.image= this.imageUrl; //如页面有图片上传功能放开注释
-                axios.post(`/role/${this.pojo.id==null?'add':'update'}.do`,this.pojo).then(response => {
+                axios.post(`/role/${this.pojo.id==null?'add':'update'}`,this.pojo).then(response => {
                     this.fetchData (); //刷新列表
                     this.formVisible = false ;//关闭窗口
                 });
@@ -158,7 +158,7 @@
             edit (id){
                 this.formVisible = true // 打开窗口
                 // 调用查询
-                axios.get(`/role/findById.do?id=${id}`).then(response => {
+                axios.get(`/role/findById?id=${id}`).then(response => {
                     this.pojo = response.data;
                     // this.imageUrl=this.pojo.image //显示图片  如页面有图片上传功能放开注释
                 })
@@ -169,7 +169,7 @@
                     cancelButtonText: '取消',
                     type: 'warning'
                 }).then( () => {
-                    axios.get(`/role/delete.do?id=${id}`).then(response => {
+                    axios.get(`/role/delete?id=${id}`).then(response => {
                         this.fetchData (); //刷新列表
                     })
                 })

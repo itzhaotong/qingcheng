@@ -1,59 +1,61 @@
 package com.qingcheng.pojo;
+
 import java.io.Serializable;
+
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * orderItem实体类
+ * 
  * @author Administrator
  *
  */
-public class OrderItem implements Serializable{
+@Table(name = "tb_order_item")
+public class OrderItem implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	private String id;// ID
 
+	private Integer categoryId1;// 1级分类
 
+	private Integer categoryId2;// 2级分类
 
-	private String id;//ID
+	private Integer categoryId3;// 3级分类
 
+	private String spuId;// SPU_ID
 
-	
+	private String skuId;// SKU_ID
 
-	private Integer categoryId1;//1级分类
+	private String orderId;// 订单ID
 
-	private Integer categoryId2;//2级分类
+	private String name;// 商品名称
 
-	private Integer categoryId3;//3级分类
+	private Integer price;// 单价
 
-	private String spuId;//SPU_ID
+	private Integer num;// 数量
 
-	private String skuId;//SKU_ID
+	private Integer money;// 总金额
 
-	private String orderId;//订单ID
+	private Integer payMoney;// 实付金额
 
-	private String name;//商品名称
+	private String image;// 图片地址
 
-	private Integer price;//单价
+	private Integer weight;// 重量
 
-	private Integer num;//数量
+	private Integer postFee;// 运费
 
-	private Integer money;//总金额
+	private String isReturn;// 是否退货
 
-	private Integer payMoney;//实付金额
-
-	private String image;//图片地址
-
-	private Integer weight;//重量
-
-	private Integer postFee;//运费
-
-	private String isReturn;//是否退货
-
-	
 	public String getId() {
 		return id;
 	}
+
 	public void setId(String id) {
 		this.id = id;
 	}
@@ -61,6 +63,7 @@ public class OrderItem implements Serializable{
 	public Integer getCategoryId1() {
 		return categoryId1;
 	}
+
 	public void setCategoryId1(Integer categoryId1) {
 		this.categoryId1 = categoryId1;
 	}
@@ -68,6 +71,7 @@ public class OrderItem implements Serializable{
 	public Integer getCategoryId2() {
 		return categoryId2;
 	}
+
 	public void setCategoryId2(Integer categoryId2) {
 		this.categoryId2 = categoryId2;
 	}
@@ -75,6 +79,7 @@ public class OrderItem implements Serializable{
 	public Integer getCategoryId3() {
 		return categoryId3;
 	}
+
 	public void setCategoryId3(Integer categoryId3) {
 		this.categoryId3 = categoryId3;
 	}
@@ -82,6 +87,7 @@ public class OrderItem implements Serializable{
 	public String getSpuId() {
 		return spuId;
 	}
+
 	public void setSpuId(String spuId) {
 		this.spuId = spuId;
 	}
@@ -89,6 +95,7 @@ public class OrderItem implements Serializable{
 	public String getSkuId() {
 		return skuId;
 	}
+
 	public void setSkuId(String skuId) {
 		this.skuId = skuId;
 	}
@@ -96,6 +103,7 @@ public class OrderItem implements Serializable{
 	public String getOrderId() {
 		return orderId;
 	}
+
 	public void setOrderId(String orderId) {
 		this.orderId = orderId;
 	}
@@ -103,6 +111,7 @@ public class OrderItem implements Serializable{
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -110,6 +119,7 @@ public class OrderItem implements Serializable{
 	public Integer getPrice() {
 		return price;
 	}
+
 	public void setPrice(Integer price) {
 		this.price = price;
 	}
@@ -117,6 +127,7 @@ public class OrderItem implements Serializable{
 	public Integer getNum() {
 		return num;
 	}
+
 	public void setNum(Integer num) {
 		this.num = num;
 	}
@@ -124,6 +135,7 @@ public class OrderItem implements Serializable{
 	public Integer getMoney() {
 		return money;
 	}
+
 	public void setMoney(Integer money) {
 		this.money = money;
 	}
@@ -131,6 +143,7 @@ public class OrderItem implements Serializable{
 	public Integer getPayMoney() {
 		return payMoney;
 	}
+
 	public void setPayMoney(Integer payMoney) {
 		this.payMoney = payMoney;
 	}
@@ -138,6 +151,7 @@ public class OrderItem implements Serializable{
 	public String getImage() {
 		return image;
 	}
+
 	public void setImage(String image) {
 		this.image = image;
 	}
@@ -145,6 +159,7 @@ public class OrderItem implements Serializable{
 	public Integer getWeight() {
 		return weight;
 	}
+
 	public void setWeight(Integer weight) {
 		this.weight = weight;
 	}
@@ -152,6 +167,7 @@ public class OrderItem implements Serializable{
 	public Integer getPostFee() {
 		return postFee;
 	}
+
 	public void setPostFee(Integer postFee) {
 		this.postFee = postFee;
 	}
@@ -159,10 +175,9 @@ public class OrderItem implements Serializable{
 	public String getIsReturn() {
 		return isReturn;
 	}
+
 	public void setIsReturn(String isReturn) {
 		this.isReturn = isReturn;
 	}
 
-
-	
 }

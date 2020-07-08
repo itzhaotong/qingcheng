@@ -2,16 +2,22 @@ package com.qingcheng.mapper;
 
 import com.qingcheng.pojo.OrderLog;
 
-public interface OrderLogMapper {
-    int deleteByPrimaryKey(String id);
+import tk.mybatis.mapper.common.Mapper;
 
-    int insert(OrderLog record);
+public interface OrderLogMapper extends Mapper<OrderLog> {
+	int deleteByPrimaryKey(String id);
 
-    int insertSelective(OrderLog record);
+	@Override
+	int insert(OrderLog record);
 
-    OrderLog selecyPrimaryKey(String id);
+	@Override
+	int insertSelective(OrderLog record);
 
-    int updateByPrimaryKeySelective(OrderLog record);
+	OrderLog selecyPrimaryKey(String id);
 
-    int updateByPrimaryKey(OrderLog record);
+	@Override
+	int updateByPrimaryKeySelective(OrderLog record);
+
+	@Override
+	int updateByPrimaryKey(OrderLog record);
 }

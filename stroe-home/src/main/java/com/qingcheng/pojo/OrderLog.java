@@ -1,43 +1,45 @@
 package com.qingcheng.pojo;
+
 import java.io.Serializable;
+
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * orderLog实体类
+ * 
  * @author Administrator
  *
  */
-public class OrderLog implements Serializable{
+@Table(name = "tb_order_log")
+public class OrderLog implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	private String id;// ID
 
+	private String operater;// 操作员
 
+	private java.util.Date operateTime;// 操作时间
 
-	private String id;//ID
+	private Long orderId;// 订单ID
 
+	private String orderStatus;// 订单状态
 
-	
+	private String payStatus;// 付款状态
 
-	private String operater;//操作员
+	private String consignStatus;// 发货状态
 
-	private java.util.Date operateTime;//操作时间
+	private String remarks;// 备注
 
-	private Long orderId;//订单ID
-
-	private String orderStatus;//订单状态
-
-	private String payStatus;//付款状态
-
-	private String consignStatus;//发货状态
-
-	private String remarks;//备注
-
-	
 	public String getId() {
 		return id;
 	}
+
 	public void setId(String id) {
 		this.id = id;
 	}
@@ -45,6 +47,7 @@ public class OrderLog implements Serializable{
 	public String getOperater() {
 		return operater;
 	}
+
 	public void setOperater(String operater) {
 		this.operater = operater;
 	}
@@ -52,6 +55,7 @@ public class OrderLog implements Serializable{
 	public java.util.Date getOperateTime() {
 		return operateTime;
 	}
+
 	public void setOperateTime(java.util.Date operateTime) {
 		this.operateTime = operateTime;
 	}
@@ -59,6 +63,7 @@ public class OrderLog implements Serializable{
 	public Long getOrderId() {
 		return orderId;
 	}
+
 	public void setOrderId(Long orderId) {
 		this.orderId = orderId;
 	}
@@ -66,6 +71,7 @@ public class OrderLog implements Serializable{
 	public String getOrderStatus() {
 		return orderStatus;
 	}
+
 	public void setOrderStatus(String orderStatus) {
 		this.orderStatus = orderStatus;
 	}
@@ -73,6 +79,7 @@ public class OrderLog implements Serializable{
 	public String getPayStatus() {
 		return payStatus;
 	}
+
 	public void setPayStatus(String payStatus) {
 		this.payStatus = payStatus;
 	}
@@ -80,6 +87,7 @@ public class OrderLog implements Serializable{
 	public String getConsignStatus() {
 		return consignStatus;
 	}
+
 	public void setConsignStatus(String consignStatus) {
 		this.consignStatus = consignStatus;
 	}
@@ -87,10 +95,9 @@ public class OrderLog implements Serializable{
 	public String getRemarks() {
 		return remarks;
 	}
+
 	public void setRemarks(String remarks) {
 		this.remarks = remarks;
 	}
 
-
-	
 }

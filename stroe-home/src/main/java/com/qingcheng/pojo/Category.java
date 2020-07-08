@@ -1,43 +1,45 @@
 package com.qingcheng.pojo;
+
 import java.io.Serializable;
+
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * category实体类
+ * 
  * @author Administrator
  *
  */
-public class Category implements Serializable{
+@Table(name = "tb_category")
+public class Category implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	private Integer id;// 分类ID
 
+	private String name;// 分类名称
 
+	private Integer goodsNum;// 商品数量
 
-	private Integer id;//分类ID
+	private String isShow;// 是否显示
 
+	private String isMenu;// 是否导航
 
-	
+	private Integer seq;// 排序
 
-	private String name;//分类名称
+	private Integer parentId;// 上级ID
 
-	private Integer goodsNum;//商品数量
+	private Integer templateId;// 模板ID
 
-	private String isShow;//是否显示
-
-	private String isMenu;//是否导航
-
-	private Integer seq;//排序
-
-	private Integer parentId;//上级ID
-
-	private Integer templateId;//模板ID
-
-	
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
@@ -45,6 +47,7 @@ public class Category implements Serializable{
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -52,6 +55,7 @@ public class Category implements Serializable{
 	public Integer getGoodsNum() {
 		return goodsNum;
 	}
+
 	public void setGoodsNum(Integer goodsNum) {
 		this.goodsNum = goodsNum;
 	}
@@ -59,6 +63,7 @@ public class Category implements Serializable{
 	public String getIsShow() {
 		return isShow;
 	}
+
 	public void setIsShow(String isShow) {
 		this.isShow = isShow;
 	}
@@ -66,6 +71,7 @@ public class Category implements Serializable{
 	public String getIsMenu() {
 		return isMenu;
 	}
+
 	public void setIsMenu(String isMenu) {
 		this.isMenu = isMenu;
 	}
@@ -73,6 +79,7 @@ public class Category implements Serializable{
 	public Integer getSeq() {
 		return seq;
 	}
+
 	public void setSeq(Integer seq) {
 		this.seq = seq;
 	}
@@ -80,6 +87,7 @@ public class Category implements Serializable{
 	public Integer getParentId() {
 		return parentId;
 	}
+
 	public void setParentId(Integer parentId) {
 		this.parentId = parentId;
 	}
@@ -87,10 +95,9 @@ public class Category implements Serializable{
 	public Integer getTemplateId() {
 		return templateId;
 	}
+
 	public void setTemplateId(Integer templateId) {
 		this.templateId = templateId;
 	}
 
-
-	
 }

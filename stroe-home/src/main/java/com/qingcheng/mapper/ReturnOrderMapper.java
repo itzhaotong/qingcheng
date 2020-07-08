@@ -2,16 +2,7 @@ package com.qingcheng.mapper;
 
 import com.qingcheng.pojo.ReturnOrder;
 
-public interface ReturnOrderMapper {
-    int deleteByPrimaryKey(Long id);
+import tk.mybatis.mapper.common.Mapper;
 
-    int insert(ReturnOrder record);
-
-    int insertSelective(ReturnOrder record);
-
-    ReturnOrder selecyPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(ReturnOrder record);
-
-    int updateByPrimaryKey(ReturnOrder record);
+public interface ReturnOrderMapper extends Mapper<ReturnOrder> {
 }

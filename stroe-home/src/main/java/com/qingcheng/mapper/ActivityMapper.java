@@ -2,18 +2,8 @@ package com.qingcheng.mapper;
 
 import com.qingcheng.pojo.Activity;
 
-public interface ActivityMapper {
-    int deleteByPrimaryKey(Integer id);
+import tk.mybatis.mapper.common.Mapper;
 
-    int insert(Activity record);
+public interface ActivityMapper extends Mapper<Activity> {
 
-    int insertSelective(Activity record);
-
-    Activity selecyPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(Activity record);
-
-    int updateByPrimaryKeyWithBLOBs(Activity record);
-
-    int updateByPrimaryKey(Activity record);
 }

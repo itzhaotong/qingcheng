@@ -1,11 +1,8 @@
 package com.qingcheng.mapper;
 
-import com.qingcheng.pojo.CategoryBrandKey;
+import com.qingcheng.pojo.CategoryBrand;
 
-public interface CategoryBrandMapper {
-    int deleteByPrimaryKey(CategoryBrandKey key);
+import tk.mybatis.mapper.common.Mapper;
 
-    int insert(CategoryBrandKey record);
-
-    int insertSelective(CategoryBrandKey record);
+public interface CategoryBrandMapper extends Mapper<CategoryBrand> {
 }

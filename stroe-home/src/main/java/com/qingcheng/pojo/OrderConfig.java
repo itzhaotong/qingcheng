@@ -1,39 +1,41 @@
 package com.qingcheng.pojo;
+
 import java.io.Serializable;
+
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * orderConfig实体类
+ * 
  * @author Administrator
  *
  */
-public class OrderConfig implements Serializable{
+@Table(name = "tb_order_config")
+public class OrderConfig implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	private Integer id;// ID
 
+	private Integer orderTimeout;// 正常订单超时时间（分）
 
+	private Integer seckillTimeout;// 秒杀订单超时时间（分）
 
-	private Integer id;//ID
+	private Integer takeTimeout;// 自动收货（天）
 
+	private Integer serviceTimeout;// 售后期限
 
-	
+	private Integer commentTimeout;// 自动五星好评
 
-	private Integer orderTimeout;//正常订单超时时间（分）
-
-	private Integer seckillTimeout;//秒杀订单超时时间（分）
-
-	private Integer takeTimeout;//自动收货（天）
-
-	private Integer serviceTimeout;//售后期限
-
-	private Integer commentTimeout;//自动五星好评
-
-	
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
@@ -41,6 +43,7 @@ public class OrderConfig implements Serializable{
 	public Integer getOrderTimeout() {
 		return orderTimeout;
 	}
+
 	public void setOrderTimeout(Integer orderTimeout) {
 		this.orderTimeout = orderTimeout;
 	}
@@ -48,6 +51,7 @@ public class OrderConfig implements Serializable{
 	public Integer getSeckillTimeout() {
 		return seckillTimeout;
 	}
+
 	public void setSeckillTimeout(Integer seckillTimeout) {
 		this.seckillTimeout = seckillTimeout;
 	}
@@ -55,6 +59,7 @@ public class OrderConfig implements Serializable{
 	public Integer getTakeTimeout() {
 		return takeTimeout;
 	}
+
 	public void setTakeTimeout(Integer takeTimeout) {
 		this.takeTimeout = takeTimeout;
 	}
@@ -62,6 +67,7 @@ public class OrderConfig implements Serializable{
 	public Integer getServiceTimeout() {
 		return serviceTimeout;
 	}
+
 	public void setServiceTimeout(Integer serviceTimeout) {
 		this.serviceTimeout = serviceTimeout;
 	}
@@ -69,10 +75,9 @@ public class OrderConfig implements Serializable{
 	public Integer getCommentTimeout() {
 		return commentTimeout;
 	}
+
 	public void setCommentTimeout(Integer commentTimeout) {
 		this.commentTimeout = commentTimeout;
 	}
 
-
-	
 }

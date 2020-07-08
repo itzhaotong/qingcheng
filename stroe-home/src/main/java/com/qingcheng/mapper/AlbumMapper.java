@@ -2,18 +2,7 @@ package com.qingcheng.mapper;
 
 import com.qingcheng.pojo.Album;
 
-public interface AlbumMapper {
-    int deleteByPrimaryKey(Long id);
+import tk.mybatis.mapper.common.Mapper;
 
-    int insert(Album record);
-
-    int insertSelective(Album record);
-
-    Album selecyPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(Album record);
-
-    int updateByPrimaryKeyWithBLOBs(Album record);
-
-    int updateByPrimaryKey(Album record);
+public interface AlbumMapper extends Mapper<Album> {
 }

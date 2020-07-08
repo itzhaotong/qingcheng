@@ -2,16 +2,7 @@ package com.qingcheng.mapper;
 
 import com.qingcheng.pojo.Sku;
 
-public interface SkuMapper {
-    int deleteByPrimaryKey(String id);
+import tk.mybatis.mapper.common.Mapper;
 
-    int insert(Sku record);
-
-    int insertSelective(Sku record);
-
-    Sku selecyPrimaryKey(String id);
-
-    int updateByPrimaryKeySelective(Sku record);
-
-    int updateByPrimaryKey(Sku record);
+public interface SkuMapper extends Mapper<Sku> {
 }

@@ -2,16 +2,7 @@ package com.qingcheng.mapper;
 
 import com.qingcheng.pojo.Preferential;
 
-public interface PreferentialMapper {
-    int deleteByPrimaryKey(Integer id);
+import tk.mybatis.mapper.common.Mapper;
 
-    int insert(Preferential record);
-
-    int insertSelective(Preferential record);
-
-    Preferential selecyPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(Preferential record);
-
-    int updateByPrimaryKey(Preferential record);
+public interface PreferentialMapper extends Mapper<Preferential> {
 }

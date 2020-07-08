@@ -2,16 +2,7 @@ package com.qingcheng.mapper;
 
 import com.qingcheng.pojo.Role;
 
-public interface RoleMapper {
-    int deleteByPrimaryKey(Integer id);
+import tk.mybatis.mapper.common.Mapper;
 
-    int insert(Role record);
-
-    int insertSelective(Role record);
-
-    Role selecyPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(Role record);
-
-    int updateByPrimaryKey(Role record);
+public interface RoleMapper extends Mapper<Role> {
 }

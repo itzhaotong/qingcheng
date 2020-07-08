@@ -1,71 +1,83 @@
 package com.qingcheng.pojo;
 
 import java.io.Serializable;
-import java.util.Date;
 
-public class LoginLog implements Serializable{
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+/**
+ * loginLog实体类
+ * 
+ * @author Administrator
+ *
+ */
+@Table(name = "tb_login_log")
+public class LoginLog implements Serializable {
+
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	private Integer id;
+	@Id
+	private Integer id;// id
 
-    private String loginName;
+	private String loginName;// login_name
 
-    private String ip;
+	private String ip;// ip
 
-    private String browserName;
+	private String browserName;// browser_name
 
-    private String location;
+	private String location;// 地区
 
-    private Date loginTime;
+	private java.util.Date loginTime;// 登录时间
 
-    public Integer getId() {
-        return id;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public String getLoginName() {
-        return loginName;
-    }
+	public String getLoginName() {
+		return loginName;
+	}
 
-    public void setLoginName(String loginName) {
-        this.loginName = loginName == null ? null : loginName.trim();
-    }
+	public void setLoginName(String loginName) {
+		this.loginName = loginName;
+	}
 
-    public String getIp() {
-        return ip;
-    }
+	public String getIp() {
+		return ip;
+	}
 
-    public void setIp(String ip) {
-        this.ip = ip == null ? null : ip.trim();
-    }
+	public void setIp(String ip) {
+		this.ip = ip;
+	}
 
-    public String getBrowserName() {
-        return browserName;
-    }
+	public String getBrowserName() {
+		return browserName;
+	}
 
-    public void setBrowserName(String browserName) {
-        this.browserName = browserName == null ? null : browserName.trim();
-    }
+	public void setBrowserName(String browserName) {
+		this.browserName = browserName;
+	}
 
-    public String getLocation() {
-        return location;
-    }
+	public String getLocation() {
+		return location;
+	}
 
-    public void setLocation(String location) {
-        this.location = location == null ? null : location.trim();
-    }
+	public void setLocation(String location) {
+		this.location = location;
+	}
 
-    public Date getLoginTime() {
-        return loginTime;
-    }
+	public java.util.Date getLoginTime() {
+		return loginTime;
+	}
 
-    public void setLoginTime(Date loginTime) {
-        this.loginTime = loginTime;
-    }
+	public void setLoginTime(java.util.Date loginTime) {
+		this.loginTime = loginTime;
+	}
+
 }

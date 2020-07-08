@@ -1,37 +1,39 @@
 package com.qingcheng.pojo;
+
 import java.io.Serializable;
+
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * spec实体类
+ * 
  * @author Administrator
  *
  */
-public class Spec implements Serializable{
+@Table(name = "tb_spec")
+public class Spec implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	private Integer id;// ID
 
+	private String name;// 名称
 
+	private String options;// 规格选项
 
-	private Integer id;//ID
+	private Integer seq;// 排序
 
+	private Integer templateId;// 模板ID
 
-	
-
-	private String name;//名称
-
-	private String options;//规格选项
-
-	private Integer seq;//排序
-
-	private Integer templateId;//模板ID
-
-	
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
@@ -39,6 +41,7 @@ public class Spec implements Serializable{
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -46,6 +49,7 @@ public class Spec implements Serializable{
 	public String getOptions() {
 		return options;
 	}
+
 	public void setOptions(String options) {
 		this.options = options;
 	}
@@ -53,6 +57,7 @@ public class Spec implements Serializable{
 	public Integer getSeq() {
 		return seq;
 	}
+
 	public void setSeq(Integer seq) {
 		this.seq = seq;
 	}
@@ -60,10 +65,9 @@ public class Spec implements Serializable{
 	public Integer getTemplateId() {
 		return templateId;
 	}
+
 	public void setTemplateId(Integer templateId) {
 		this.templateId = templateId;
 	}
 
-
-	
 }

@@ -1,33 +1,35 @@
 package com.qingcheng.pojo;
+
 import java.io.Serializable;
+
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * freightTemplate实体类
+ * 
  * @author Administrator
  *
  */
-public class FreightTemplate implements Serializable{
+@Table(name = "tb_freight_template")
+public class FreightTemplate implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	private Integer id;// ID
 
+	private String name;// 模板名称
 
+	private String type;// 计费方式
 
-	private Integer id;//ID
-
-
-	
-
-	private String name;//模板名称
-
-	private String type;//计费方式
-
-	
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
@@ -35,6 +37,7 @@ public class FreightTemplate implements Serializable{
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -42,10 +45,9 @@ public class FreightTemplate implements Serializable{
 	public String getType() {
 		return type;
 	}
+
 	public void setType(String type) {
 		this.type = type;
 	}
 
-
-	
 }

@@ -2,16 +2,7 @@ package com.qingcheng.mapper;
 
 import com.qingcheng.pojo.Provinces;
 
-public interface ProvincesMapper {
-    int deleteByPrimaryKey(String provinceid);
+import tk.mybatis.mapper.common.Mapper;
 
-    int insert(Provinces record);
-
-    int insertSelective(Provinces record);
-
-    Provinces selecyPrimaryKey(String provinceid);
-
-    int updateByPrimaryKeySelective(Provinces record);
-
-    int updateByPrimaryKey(Provinces record);
+public interface ProvincesMapper extends Mapper<Provinces> {
 }

@@ -1,67 +1,69 @@
 package com.qingcheng.pojo;
+
 import java.io.Serializable;
+
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * user实体类
+ * 
  * @author Administrator
  *
  */
-public class User implements Serializable{
+@Table(name = "tb_user")
+public class User implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	private String username;// 用户名
 
+	private String password;// 密码，加密存储
 
+	private String phone;// 注册手机号
 
-	private String username;//用户名
+	private String email;// 注册邮箱
 
+	private java.util.Date created;// 创建时间
 
-	
+	private java.util.Date updated;// 修改时间
 
-	private String password;//密码，加密存储
+	private String sourceType;// 会员来源：1:PC，2：H5，3：Android，4：IOS
 
-	private String phone;//注册手机号
+	private String nickName;// 昵称
 
-	private String email;//注册邮箱
+	private String name;// 真实姓名
 
-	private java.util.Date created;//创建时间
+	private String status;// 使用状态（1正常 0非正常）
 
-	private java.util.Date updated;//修改时间
+	private String headPic;// 头像地址
 
-	private String sourceType;//会员来源：1:PC，2：H5，3：Android，4：IOS
+	private String qq;// QQ号码
 
-	private String nickName;//昵称
+	private String isMobileCheck;// 手机是否验证 （0否 1是）
 
-	private String name;//真实姓名
+	private String isEmailCheck;// 邮箱是否检测（0否 1是）
 
-	private String status;//使用状态（1正常 0非正常）
+	private String sex;// 性别，1男，0女
 
-	private String headPic;//头像地址
+	private Integer userLevel;// 会员等级
 
-	private String qq;//QQ号码
+	private Integer points;// 积分
 
-	private String isMobileCheck;//手机是否验证 （0否  1是）
+	private Integer experienceValue;// 经验值
 
-	private String isEmailCheck;//邮箱是否检测（0否  1是）
+	private java.util.Date birthday;// 出生年月日
 
-	private String sex;//性别，1男，0女
+	private java.util.Date lastLoginTime;// 最后登录时间
 
-	private Integer userLevel;//会员等级
-
-	private Integer points;//积分
-
-	private Integer experienceValue;//经验值
-
-	private java.util.Date birthday;//出生年月日
-
-	private java.util.Date lastLoginTime;//最后登录时间
-
-	
 	public String getUsername() {
 		return username;
 	}
+
 	public void setUsername(String username) {
 		this.username = username;
 	}
@@ -69,6 +71,7 @@ public class User implements Serializable{
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
@@ -76,6 +79,7 @@ public class User implements Serializable{
 	public String getPhone() {
 		return phone;
 	}
+
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
@@ -83,6 +87,7 @@ public class User implements Serializable{
 	public String getEmail() {
 		return email;
 	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
@@ -90,6 +95,7 @@ public class User implements Serializable{
 	public java.util.Date getCreated() {
 		return created;
 	}
+
 	public void setCreated(java.util.Date created) {
 		this.created = created;
 	}
@@ -97,6 +103,7 @@ public class User implements Serializable{
 	public java.util.Date getUpdated() {
 		return updated;
 	}
+
 	public void setUpdated(java.util.Date updated) {
 		this.updated = updated;
 	}
@@ -104,6 +111,7 @@ public class User implements Serializable{
 	public String getSourceType() {
 		return sourceType;
 	}
+
 	public void setSourceType(String sourceType) {
 		this.sourceType = sourceType;
 	}
@@ -111,6 +119,7 @@ public class User implements Serializable{
 	public String getNickName() {
 		return nickName;
 	}
+
 	public void setNickName(String nickName) {
 		this.nickName = nickName;
 	}
@@ -118,6 +127,7 @@ public class User implements Serializable{
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -125,6 +135,7 @@ public class User implements Serializable{
 	public String getStatus() {
 		return status;
 	}
+
 	public void setStatus(String status) {
 		this.status = status;
 	}
@@ -132,6 +143,7 @@ public class User implements Serializable{
 	public String getHeadPic() {
 		return headPic;
 	}
+
 	public void setHeadPic(String headPic) {
 		this.headPic = headPic;
 	}
@@ -139,6 +151,7 @@ public class User implements Serializable{
 	public String getQq() {
 		return qq;
 	}
+
 	public void setQq(String qq) {
 		this.qq = qq;
 	}
@@ -146,6 +159,7 @@ public class User implements Serializable{
 	public String getIsMobileCheck() {
 		return isMobileCheck;
 	}
+
 	public void setIsMobileCheck(String isMobileCheck) {
 		this.isMobileCheck = isMobileCheck;
 	}
@@ -153,6 +167,7 @@ public class User implements Serializable{
 	public String getIsEmailCheck() {
 		return isEmailCheck;
 	}
+
 	public void setIsEmailCheck(String isEmailCheck) {
 		this.isEmailCheck = isEmailCheck;
 	}
@@ -160,6 +175,7 @@ public class User implements Serializable{
 	public String getSex() {
 		return sex;
 	}
+
 	public void setSex(String sex) {
 		this.sex = sex;
 	}
@@ -167,6 +183,7 @@ public class User implements Serializable{
 	public Integer getUserLevel() {
 		return userLevel;
 	}
+
 	public void setUserLevel(Integer userLevel) {
 		this.userLevel = userLevel;
 	}
@@ -174,6 +191,7 @@ public class User implements Serializable{
 	public Integer getPoints() {
 		return points;
 	}
+
 	public void setPoints(Integer points) {
 		this.points = points;
 	}
@@ -181,6 +199,7 @@ public class User implements Serializable{
 	public Integer getExperienceValue() {
 		return experienceValue;
 	}
+
 	public void setExperienceValue(Integer experienceValue) {
 		this.experienceValue = experienceValue;
 	}
@@ -188,6 +207,7 @@ public class User implements Serializable{
 	public java.util.Date getBirthday() {
 		return birthday;
 	}
+
 	public void setBirthday(java.util.Date birthday) {
 		this.birthday = birthday;
 	}
@@ -195,10 +215,9 @@ public class User implements Serializable{
 	public java.util.Date getLastLoginTime() {
 		return lastLoginTime;
 	}
+
 	public void setLastLoginTime(java.util.Date lastLoginTime) {
 		this.lastLoginTime = lastLoginTime;
 	}
 
-
-	
 }

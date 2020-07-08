@@ -1,43 +1,45 @@
 package com.qingcheng.pojo;
+
 import java.io.Serializable;
+
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * preferential实体类
+ * 
  * @author Administrator
  *
  */
-public class Preferential implements Serializable{
+@Table(name = "tb_preferential")
+public class Preferential implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	private Integer id;// ID
 
+	private Integer buyMoney;// 消费金额
 
+	private Integer preMoney;// 优惠金额
 
-	private Integer id;//ID
+	private Long categoryId;// 品类ID
 
+	private java.util.Date startTime;// 活动开始日期
 
-	
+	private java.util.Date endTime;// 活动截至日期
 
-	private Integer buyMoney;//消费金额
+	private String state;// 状态
 
-	private Integer preMoney;//优惠金额
+	private String type;// 类型1不翻倍 2翻倍
 
-	private Long categoryId;//品类ID
-
-	private java.util.Date startTime;//活动开始日期
-
-	private java.util.Date endTime;//活动截至日期
-
-	private String state;//状态
-
-	private String type;//类型1不翻倍 2翻倍
-
-	
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
@@ -45,6 +47,7 @@ public class Preferential implements Serializable{
 	public Integer getBuyMoney() {
 		return buyMoney;
 	}
+
 	public void setBuyMoney(Integer buyMoney) {
 		this.buyMoney = buyMoney;
 	}
@@ -52,6 +55,7 @@ public class Preferential implements Serializable{
 	public Integer getPreMoney() {
 		return preMoney;
 	}
+
 	public void setPreMoney(Integer preMoney) {
 		this.preMoney = preMoney;
 	}
@@ -59,6 +63,7 @@ public class Preferential implements Serializable{
 	public Long getCategoryId() {
 		return categoryId;
 	}
+
 	public void setCategoryId(Long categoryId) {
 		this.categoryId = categoryId;
 	}
@@ -66,6 +71,7 @@ public class Preferential implements Serializable{
 	public java.util.Date getStartTime() {
 		return startTime;
 	}
+
 	public void setStartTime(java.util.Date startTime) {
 		this.startTime = startTime;
 	}
@@ -73,6 +79,7 @@ public class Preferential implements Serializable{
 	public java.util.Date getEndTime() {
 		return endTime;
 	}
+
 	public void setEndTime(java.util.Date endTime) {
 		this.endTime = endTime;
 	}
@@ -80,6 +87,7 @@ public class Preferential implements Serializable{
 	public String getState() {
 		return state;
 	}
+
 	public void setState(String state) {
 		this.state = state;
 	}
@@ -87,10 +95,9 @@ public class Preferential implements Serializable{
 	public String getType() {
 		return type;
 	}
+
 	public void setType(String type) {
 		this.type = type;
 	}
 
-
-	
 }

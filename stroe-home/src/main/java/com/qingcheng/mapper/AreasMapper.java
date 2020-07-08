@@ -2,16 +2,7 @@ package com.qingcheng.mapper;
 
 import com.qingcheng.pojo.Areas;
 
-public interface AreasMapper {
-    int deleteByPrimaryKey(String areaid);
+import tk.mybatis.mapper.common.Mapper;
 
-    int insert(Areas record);
-
-    int insertSelective(Areas record);
-
-    Areas selecyPrimaryKey(String areaid);
-
-    int updateByPrimaryKeySelective(Areas record);
-
-    int updateByPrimaryKey(Areas record);
+public interface AreasMapper extends Mapper<Areas> {
 }

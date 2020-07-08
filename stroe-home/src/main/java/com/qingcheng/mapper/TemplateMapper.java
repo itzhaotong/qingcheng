@@ -1,0 +1,9 @@
+package com.qingcheng.mapper;
+
+import com.qingcheng.pojo.Template;
+
+import tk.mybatis.mapper.common.Mapper;
+
+public interface TemplateMapper extends Mapper<Template> {
+
+}

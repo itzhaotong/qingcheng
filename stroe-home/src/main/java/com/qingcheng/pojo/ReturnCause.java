@@ -1,35 +1,37 @@
 package com.qingcheng.pojo;
+
 import java.io.Serializable;
+
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * returnCause实体类
+ * 
  * @author Administrator
  *
  */
-public class ReturnCause implements Serializable{
+@Table(name = "tb_return_cause")
+public class ReturnCause implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	private Integer id;// ID
 
+	private String cause;// 原因
 
+	private Integer seq;// 排序
 
-	private Integer id;//ID
+	private String status;// 是否启用
 
-
-	
-
-	private String cause;//原因
-
-	private Integer seq;//排序
-
-	private String status;//是否启用
-
-	
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
@@ -37,6 +39,7 @@ public class ReturnCause implements Serializable{
 	public String getCause() {
 		return cause;
 	}
+
 	public void setCause(String cause) {
 		this.cause = cause;
 	}
@@ -44,6 +47,7 @@ public class ReturnCause implements Serializable{
 	public Integer getSeq() {
 		return seq;
 	}
+
 	public void setSeq(Integer seq) {
 		this.seq = seq;
 	}
@@ -51,10 +55,9 @@ public class ReturnCause implements Serializable{
 	public String getStatus() {
 		return status;
 	}
+
 	public void setStatus(String status) {
 		this.status = status;
 	}
 
-
-	
 }

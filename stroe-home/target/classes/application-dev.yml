@@ -18,7 +18,7 @@ server:
 spring:
     datasource:
         driver-class-name: com.mysql.jdbc.Driver
-        url: jdbc:mysql://192.168.172.86:3306/qingcheng?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&autoReconnect=true&useSSL=true&allowMultiQueries=true
+        url: jdbc:mysql://localhost:3306/qingcheng?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&autoReconnect=true&useSSL=true&allowMultiQueries=true
         username: root
         password: root
         druid:
